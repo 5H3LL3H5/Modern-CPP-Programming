@@ -45,7 +45,10 @@ This *open-access* course is directed at those who are already familiar with C a
 ## FAQ
 
 ### What are safety hooks and when are they useful?
-Safety hooks are fail-fast callbacks exposed by hardened or checked standard-library builds (e.g., bounds/iterator checks) that fire right before an operation would trigger undefined behavior. They let applications log, terminate, or route the fault to a watchdog instead of continuing with corrupted state, which is especially helpful in safety-critical deployments where full sanitizers are too expensive but runtime guardrails are still required.
+Safety hooks are fail-fast callbacks exposed by hardened or checked standard-library builds (e.g., bounds/iterator checks).
+- They fire just before an operation would trigger undefined behavior.
+- Applications can log, terminate, or hand the fault to a watchdog instead of continuing with corrupted state.
+- They are useful in safety-critical deployments where full sanitizers are too expensive but runtime guardrails are still required.
 
 *If you enjoy the course or you find it useful*, please add a **Star**
 
