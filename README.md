@@ -42,6 +42,14 @@ This *open-access* course is directed at those who are already familiar with C a
 - *Complementary language aspects*: tools, coding conventions, project organization, and code optimization
 - *Experience-based*: many aspects, examples, and problems come from real-world cases faced during my work as a software engineer
 
+## FAQ
+
+### What are safety hooks and when are they useful?
+Safety hooks are fail-fast callbacks exposed by hardened or checked standard-library builds (e.g., bounds/iterator checks).
+- They fire just before an operation would trigger undefined behavior.
+- Applications can log, terminate, or hand the fault to a watchdog instead of continuing with corrupted state.
+- They are useful in safety-critical deployments where full sanitizers are too expensive but runtime guardrails are still required.
+
 *If you enjoy the course or you find it useful*, please add a **Star**
 
  [![stars - Modern-CPP-Programming](https://img.shields.io/github/stars/federico-busato/Modern-CPP-Programming?style=social)](https://github.com/federico-busato/Modern-CPP-Programming)
